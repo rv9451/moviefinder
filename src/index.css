@@ -17,7 +17,7 @@
 
   --breakpoint-xs: 480px;
 
-  --background-image-hero-pattern: url("/BG.png");
+  --background-image-hero-pattern: url("/bg_hero.jpg");
 }
 
 @layer base {
@@ -46,19 +46,25 @@
   header img {
     @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
   }
+  header input{
+    @apply mt-6 bg-light-100/5 px-4 py-3 rounded-lg max-w-3xl mx-auto block w-full text-base text-gray-200 placeholder-light-200 outline-hidden;
+  }
 }
 
 @layer components {
   .pattern {
-    @apply bg-hero-pattern w-full h-screen bg-center bg-cover absolute z-0;
+    @apply bg-hero-pattern w-full h-screen bg-center bg-cover absolute z-0 ;
   }
-
+.pattern::before {
+  content: "";
+  @apply absolute inset-0 bg-purple-950/40 z-10;
+}
   .wrapper {
     @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
   }
 
   .trending {
-    @apply mt-20;
+   
 
     & ul {
       @apply flex flex-row overflow-y-auto gap-5 -mt-10 w-full hide-scrollbar;
@@ -159,4 +165,12 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+@layer utilities{
+  .slick-slider{
+    @apply overflow-hidden;
+  }
+}
+.divider {
+  @apply border-solid border-t border-gray-700 my-8;
 }

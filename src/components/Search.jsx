@@ -1,5 +1,5 @@
 import React from 'react'
-
+import searchImg from '../assets/search.png'
 function Search({searchTerm, setSearchTerm,onSearch}) {
     const handlekeydow = (e)=>{
         if(e.key==='Enter'){
@@ -9,7 +9,7 @@ function Search({searchTerm, setSearchTerm,onSearch}) {
   return (
     <div className="search">
         <div>
-            <img src="./search.png" alt="Search Icon" />
+            <img src={searchImg} alt="Search Icon" />
         
       <input
         type="text"

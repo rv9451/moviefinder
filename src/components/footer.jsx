@@ -23,7 +23,7 @@ function footer() {
                         <ul className="space-y-2">
                             <li>
                                 <a
-                                    href="https://github.com/rv9451e"
+                                    href="https://github.com/rv9451"
                                     className="hover:text-white transition"
                                 >
                                     Github

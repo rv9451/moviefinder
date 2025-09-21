@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 const posterUrl = `https://image.tmdb.org/t/p/w500`;
-function MoviesCard({movie:{title,poster_path,runtimeMinutes,release_date,original_language,vote_average}}) {
+function MoviesCard({movie:{id,title,poster_path,runtimeMinutes,release_date,original_language,vote_average}}) {
   return (
-    <div className='movie-card' >
+    <Link to={`/movie/${id}`} >
+      <div className="movie-card">
         {poster_path?(
       <img src={`${posterUrl}${poster_path}`} alt={title} />
         ):(
@@ -22,8 +24,8 @@ function MoviesCard({movie:{title,poster_path,runtimeMinutes,release_date,origin
         
       </div>
       </div>
-      
-    </div>
+      </div>
+    </Link>
   )
 }
 
